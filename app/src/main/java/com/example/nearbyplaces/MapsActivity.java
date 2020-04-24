@@ -136,7 +136,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     private void getNearbyHospitals() {
-        StringBuilder stringBuilder = new StringBuilder("https://maps.googleapi.com/maps/api/place/nearbysearch/JSON?");
+        StringBuilder stringBuilder = new StringBuilder("https://maps.googleapis.com/maps/api/place/nearbysearch/JSON?");
         stringBuilder.append("location="+String.valueOf(currentLatitude)+","+String.valueOf(currentLongitude));
         stringBuilder.append("&radius=1000");
         stringBuilder.append("&type=hospital");
@@ -147,7 +147,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         dataTransfer[1] = url;
         GetNearbyPlacesData getNearbyPlacesData = new GetNearbyPlacesData();
         getNearbyPlacesData.execute(dataTransfer);
-        
+
     }
 
     private void getMyLocation(){
